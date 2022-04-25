@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .legend {
+            display: grid;
+            grid-template-columns: min-content auto;
+            border: solid black 1px;
+            border-left-width: 2px;
+            border-top-width: 2px;
+        }
+
+        .table {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto auto;
+            border: solid black 1px;
+            border-left-width: 2px;
+            border-top-width: 2px;
+        }
+
+        .row {
+            display: contents;
+        }
+
+        .row div {
+            border-right: solid black 1px;
+            border-bottom: solid black 1px;
+            padding: 0.1rem;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+
+        .row #package {
+            font-weight: bold;
+        }
+
+        .row--header div {
+            font-weight: bold;
+            background-color: transparent;
+        }
+
+        .critical div {
+            background-color: red;
+        }
+
+        .unstable div {
+            background-color: lightsalmon;
+        }
+
+        .watch div {
+            background-color: khaki;
+        }
+
+        .stable div {
+            background-color: lightgreen;
+        }
+
+        .info div {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<html>
+
+<body>
+    <h1>Package Maintenance Sheet - [AppName] - [Date of last update]</h1>
+    <h2>Legend</h2>
+    <div class="legend">
+        <div class="row stable">
+            <div>Stable</div>
+            <div>Commonly used and well supported. Essential for the app and up-to-date.</div>
+        </div>
+        <div class="row watch">
+            <div>Watch</div>
+            <div>Rarely used and not so well supported but up-to-date. Consider replacement or removal.</div>
+        </div>
+        <div class="row unstable">
+            <div>Unstable</div>
+            <div>Unsupported, deprecated or obsolete. Incompatible with other libraries or not up-to-date.</div>
+        </div>
+        <div class="row critical">
+            <div>Critical</div>
+            <div>Contains critical security issues and has to be replaced or updated.</div>
+        </div>
+    </div>
+    <h2>Production Dependencies</h2>
+    <div class="table">
+        <div class="row row--header">
+            <div id="package">Package</div>
+            <div id="environment">Environment</div>
+            <div id="description">Description</div>
+            <div id="usage">Usage</div>
+            <div id="essential">Essential</div>
+            <div id="stability">Stability</div>
+            <div id="semantic">Semantic</div>
+            <div id="last-check">Last Check</div>
+        </div>
+        <div class="row info">
+            <div id="package">Name of package</div>
+            <div id="environment">Runtime environment of package</div>
+            <div id="description">What is the package for?</div>
+            <div id="usage">Why is the package is used in the app?</div>
+            <div id="essential">Is the package essential for running the app?</div>
+            <div id="stability">Is the package stable, and if not why?</div>
+            <div id="semantic">Does the package support semantic versioning?</div>
+            <div id="last-check">Date of last stability check</div>
+        </div>
+    </div>
+
+    <h2>Development Dependencies</h2>
+
+    <div class="table">
+        <div class="row row--header">
+            <div id="package">Package</div>
+            <div id="environment">Environment</div>
+            <div id="description">Description</div>
+            <div id="usage">Usage</div>
+            <div id="essential">Essential</div>
+            <div id="stability">Stability</div>
+            <div id="semantic">Semantic</div>
+            <div id="last-check">Last Check</div>
+        </div>
+        <div class="row info">
+            <div id="package">Name of package</div>
+            <div id="environment">Runtime environment of package</div>
+            <div id="description">What is the package for?</div>
+            <div id="usage">Why is the package is used in the app?</div>
+            <div id="essential">Is the package essential for developing the app?</div>
+            <div id="stability">Is the package stable, and if not why?</div>
+            <div id="semantic">Does the package support semantic versioning?</div>
+            <div id="last-check">Date of last stability check</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
